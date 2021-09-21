@@ -58,11 +58,11 @@
 			children = (
 				4B0956C426F824CE002834C1 /* AppDelegate.swift */,
 				4B0956C626F824CE002834C1 /* SceneDelegate.swift */,
+				4B0956DA26F8266A002834C1 /* CountryTableViewController.swift */,
 				4B0956CA26F824CE002834C1 /* Main.storyboard */,
 				4B0956CD26F824D1002834C1 /* Assets.xcassets */,
 				4B0956CF26F824D1002834C1 /* LaunchScreen.storyboard */,
 				4B0956D226F824D1002834C1 /* Info.plist */,
-				4B0956DA26F8266A002834C1 /* CountryTableViewController.swift */,
 			);
 			path = "Country List";
 			sourceTree = "<group>";
