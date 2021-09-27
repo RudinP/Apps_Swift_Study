@@ -6,27 +6,28 @@ class CountryDefinitionViewController: UIViewController {
     @IBOutlet weak var bigFlagLabel: UILabel!
     @IBOutlet weak var countryDefinitionLabel: UILabel!
     
-    var country = "🇨🇦";//var을 사용하려면 선언과 동시에 정의되어야하므로 캐나다 국기 사용.
+    var country = Country();
     override func viewDidLoad() {
         super.viewDidLoad()
-        bigFlagLabel.text = country;
+        bigFlagLabel.text = country.flag;
+        countryDefinitionLabel.text = "\(country.name) flag is \(country.flag). It was founded in \(country.year). It is in \(country.region). The population is \(country.population) million.";
         
         //let flags = ["🇧🇷", "🇳🇿", "🇵🇰", "🇨🇦", "🇺🇸"];
-        if country == "🇧🇷"{
-            countryDefinitionLabel.text = "Brazil"
-        }
-        if country == "🇳🇿"{
-            countryDefinitionLabel.text = "NewZealand"
-        }
-        if country == "🇵🇰"{
-            countryDefinitionLabel.text = "Pakistan"
-        }
-        if country == "🇨🇦"{
-            countryDefinitionLabel.text = "Canada"
-        }
-        if country == "🇺🇸"{
-            countryDefinitionLabel.text = "USA"
-        }
+        //if country == "🇧🇷"{
+        //    countryDefinitionLabel.text = "Brazil"
+       // }
+       // if country == "🇳🇿"{
+       //     countryDefinitionLabel.text = "NewZealand"
+       // }
+       // if country == "🇵🇰"{
+      //      countryDefinitionLabel.text = "Pakistan"
+      //  }
+      //  if country == "🇨🇦"{
+       //     countryDefinitionLabel.text = "Canada"
+      //  }
+      //  if country == "🇺🇸"{
+      //      countryDefinitionLabel.text = "USA"
+       // }
     }
     
 }
