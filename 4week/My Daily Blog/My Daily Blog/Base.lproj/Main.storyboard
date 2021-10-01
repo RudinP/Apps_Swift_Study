@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYX-Sh-JA8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blog Entries Table View Controller-->
+        <scene sceneID="WAf-dU-s0U">
+            <objects>
+                <tableViewController id="BpO-66-MGz" customClass="BlogEntriesTableViewController" customModule="My_Daily_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEI-L7-m4K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KwA-YE-1z2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwA-YE-1z2" id="5Iv-dd-cLT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BpO-66-MGz" id="TcD-Cz-EcW"/>
+                            <outlet property="delegate" destination="BpO-66-MGz" id="1bv-NC-5lL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="I7C-Yw-lJ4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Eg6-nD-I7Y">
+                            <connections>
+                                <segue destination="aJZ-J8-Oo5" kind="show" id="5Q4-kL-rgq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIs-3t-Hbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="108"/>
+        </scene>
+        <!--Blog App-->
+        <scene sceneID="fFx-Gy-1a1">
+            <objects>
+                <viewController id="aJZ-J8-Oo5" customClass="BlogEntryViewController" customModule="My_Daily_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4sd-9X-9Qj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="k6k-yH-iup">
+                                <rect key="frame" x="47" y="113" width="320" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="zqN-36-rGR"/>
+                                </constraints>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="857-2v-gUv">
+                                <rect key="frame" x="25" y="213" width="364" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ygu-As-anv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k6k-yH-iup" firstAttribute="top" secondItem="ygu-As-anv" secondAttribute="top" constant="25" id="J4Q-mV-V14"/>
+                            <constraint firstItem="ygu-As-anv" firstAttribute="trailing" secondItem="857-2v-gUv" secondAttribute="trailing" constant="25" id="O5I-FA-iph"/>
+                            <constraint firstItem="857-2v-gUv" firstAttribute="leading" secondItem="ygu-As-anv" secondAttribute="leading" constant="25" id="QBk-gs-hPA"/>
+                            <constraint firstItem="ygu-As-anv" firstAttribute="bottom" secondItem="857-2v-gUv" secondAttribute="bottom" constant="25" id="oZu-vM-YRn"/>
+                            <constraint firstItem="k6k-yH-iup" firstAttribute="centerX" secondItem="4sd-9X-9Qj" secondAttribute="centerX" id="pfH-d7-sqF"/>
+                            <constraint firstItem="857-2v-gUv" firstAttribute="top" secondItem="k6k-yH-iup" secondAttribute="bottom" constant="25" id="wh5-iG-2iE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog App" id="ZMl-8i-uC8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Ljc-hx-t2x">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blogEntryTextView" destination="857-2v-gUv" id="ui7-Ea-pQo"/>
+                        <outlet property="datePicker" destination="k6k-yH-iup" id="Yw9-He-0Ak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaJ-RS-Qg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3FY-qn-0IN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NYX-Sh-JA8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YDm-Gd-Wfr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BpO-66-MGz" kind="relationship" relationship="rootViewController" id="swh-cH-oJI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGT-oD-Ehn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
