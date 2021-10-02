@@ -13,6 +13,18 @@ class BlogEntriesTableViewController: UITableViewController {
         super.viewDidLoad()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool){
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+            
+            if let dataFromCoreData = try? context.fetch(BlogEntry.fetchRequest()) as? [BlogEntry]{
+                
+                blogEntries = dataFromCoreData;
+                tableView.reloadData()
+            }
+        }
+
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -31,7 +43,7 @@ class BlogEntriesTableViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryViewController = segue.destination as? BlogEntryViewController{
-            entryViewController.entriesViewController = self;
+            
         }
     }
 

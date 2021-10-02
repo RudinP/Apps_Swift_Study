@@ -15,9 +15,10 @@
 		4B206CF42706EDA200E677D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B206CF22706EDA200E677D2 /* LaunchScreen.storyboard */; };
 		4B206CFF2706EDA300E677D2 /* My_Daily_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206CFE2706EDA300E677D2 /* My_Daily_BlogTests.swift */; };
 		4B206D0A2706EDA300E677D2 /* My_Daily_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D092706EDA300E677D2 /* My_Daily_BlogUITests.swift */; };
-		4B206D1B2706F2AA00E677D2 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D1A2706F2AA00E677D2 /* BlogEntry.swift */; };
 		4B206D232706F34100E677D2 /* BlogEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D222706F34100E677D2 /* BlogEntriesTableViewController.swift */; };
 		4B206D282706F38100E677D2 /* BlogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D272706F38100E677D2 /* BlogEntryViewController.swift */; };
+		4B206D5027084E9100E677D2 /* BlogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D4E27084E9100E677D2 /* BlogEntry+CoreDataClass.swift */; };
+		4B206D5127084E9100E677D2 /* BlogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D4F27084E9100E677D2 /* BlogEntry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		4B206D052706EDA300E677D2 /* My Daily BlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Daily BlogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B206D092706EDA300E677D2 /* My_Daily_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Daily_BlogUITests.swift; sourceTree = "<group>"; };
 		4B206D0B2706EDA300E677D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B206D1A2706F2AA00E677D2 /* BlogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
 		4B206D222706F34100E677D2 /* BlogEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntriesTableViewController.swift; sourceTree = "<group>"; };
 		4B206D272706F38100E677D2 /* BlogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryViewController.swift; sourceTree = "<group>"; };
+		4B206D4E27084E9100E677D2 /* BlogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B206D4F27084E9100E677D2 /* BlogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +107,13 @@
 		4B206CE32706EDA100E677D2 /* My Daily Blog */ = {
 			isa = PBXGroup;
 			children = (
+				4B206D4E27084E9100E677D2 /* BlogEntry+CoreDataClass.swift */,
+				4B206D4F27084E9100E677D2 /* BlogEntry+CoreDataProperties.swift */,
 				4B206CE42706EDA100E677D2 /* AppDelegate.swift */,
 				4B206CE62706EDA100E677D2 /* SceneDelegate.swift */,
 				4B206CEA2706EDA100E677D2 /* Main.storyboard */,
 				4B206D222706F34100E677D2 /* BlogEntriesTableViewController.swift */,
 				4B206D272706F38100E677D2 /* BlogEntryViewController.swift */,
-				4B206D1A2706F2AA00E677D2 /* BlogEntry.swift */,
 				4B206CF02706EDA200E677D2 /* Assets.xcassets */,
 				4B206CF22706EDA200E677D2 /* LaunchScreen.storyboard */,
 				4B206CF52706EDA200E677D2 /* Info.plist */,
@@ -267,8 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B206D1B2706F2AA00E677D2 /* BlogEntry.swift in Sources */,
+				4B206D5027084E9100E677D2 /* BlogEntry+CoreDataClass.swift in Sources */,
 				4B206CEF2706EDA100E677D2 /* My_Daily_Blog.xcdatamodeld in Sources */,
+				4B206D5127084E9100E677D2 /* BlogEntry+CoreDataProperties.swift in Sources */,
 				4B206CE52706EDA100E677D2 /* AppDelegate.swift in Sources */,
 				4B206CE72706EDA100E677D2 /* SceneDelegate.swift in Sources */,
 				4B206D232706F34100E677D2 /* BlogEntriesTableViewController.swift in Sources */,
