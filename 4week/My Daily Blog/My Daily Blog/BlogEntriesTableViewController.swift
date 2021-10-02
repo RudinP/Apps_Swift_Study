@@ -41,9 +41,15 @@ class BlogEntriesTableViewController: UITableViewController {
 
         return row
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let blogEntry = blogEntries[indexPath.row]
+        performSegue(withIdentifier: "onEntrySegue", sender: blogEntry)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryViewController = segue.destination as? BlogEntryViewController{
-            
+            if let onEntrySubmit = sender as? BlogEntry {
+                entryViewController.blogEntry = onEntrySubmit
+            }
         }
     }
 

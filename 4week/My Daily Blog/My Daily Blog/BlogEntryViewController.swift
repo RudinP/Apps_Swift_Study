@@ -11,17 +11,31 @@ class BlogEntryViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var blogEntryTextView: UITextView!
         
+    var blogEntry: BlogEntry?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if blogEntry == nil{
+            
+        }else{
+            blogEntryTextView.text = blogEntry!.content
+            if let dateToBeDisplayed = blogEntry!.date{
+                datePicker.date = dateToBeDisplayed
+            }
+            
+        }
 
-        // Do any additional setup after loading the view.
     }
     override func viewWillDisappear(_ animated: Bool) {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-            let blogEntry = BlogEntry(context: context);
-            blogEntry.date = datePicker.date
-            blogEntry.content = blogEntryTextView.text
-            (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
+        
+        if blogEntry == nil{
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+                let blogEntry = BlogEntry(context: context);
+                blogEntry.date = datePicker.date
+                blogEntry.content = blogEntryTextView.text
+            }
         }
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
+        
     }
 }
