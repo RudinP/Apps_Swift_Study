@@ -80,6 +80,9 @@
                     <navigationItem key="navigationItem" title="Blog App" id="ZMl-8i-uC8">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Ljc-hx-t2x">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="onDelete:" destination="aJZ-J8-Oo5" id="Jy3-Jh-WwW"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

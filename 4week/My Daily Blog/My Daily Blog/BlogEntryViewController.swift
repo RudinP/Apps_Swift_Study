@@ -38,4 +38,13 @@ class BlogEntryViewController: UIViewController {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
         
     }
+    @IBAction func onDelete(_ sender: Any) {
+        if blogEntry != nil{
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+                context.delete(blogEntry!)
+                try? context.save()
+            }
+        }
+        navigationController?.popViewController(animated: true)
+    }
 }
