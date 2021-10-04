@@ -33,17 +33,25 @@ class BlogEntriesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = UITableViewCell()
+        if let row = tableView.dequeueReusableCell(withIdentifier: "entryRow"){
+            let blogEntry = blogEntries[indexPath.row]
+            
+            row.textLabel?.text = blogEntry.content //강의에서는 이 부분을 지우고 해결했으나, 동일한 코드임에도 내 시뮬에서는 이 부분을 주석처리하면 text처리가 안되므로 그냥 둠
 
-        let blogEntry = blogEntries[indexPath.row]
+            return row
+        }else{
+            return UITableViewCell()
+        }
+
         
-        row.textLabel?.text = blogEntry.content
-
-        return row
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let blogEntry = blogEntries[indexPath.row]
         performSegue(withIdentifier: "onEntrySegue", sender: blogEntry)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryViewController = segue.destination as? BlogEntryViewController{

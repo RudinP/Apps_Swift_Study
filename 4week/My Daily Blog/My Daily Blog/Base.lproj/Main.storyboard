@@ -17,12 +17,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KwA-YE-1z2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryRow" rowHeight="91" id="KwA-YE-1z2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwA-YE-1z2" id="5Iv-dd-cLT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts6-4h-8aP">
+                                            <rect key="frame" x="20" y="11" width="72" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="7rX-0X-how"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-g1-xYe">
+                                            <rect key="frame" x="38" y="39" width="36" height="41"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtS-6x-Gbc">
+                                            <rect key="frame" x="352" y="11" width="41.5" height="69"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ts6-4h-8aP" firstAttribute="top" secondItem="5Iv-dd-cLT" secondAttribute="topMargin" id="5fq-rL-pbF"/>
+                                        <constraint firstItem="H7m-g1-xYe" firstAttribute="centerX" secondItem="Ts6-4h-8aP" secondAttribute="centerX" id="CjQ-NS-FFX"/>
+                                        <constraint firstItem="BtS-6x-Gbc" firstAttribute="top" secondItem="5Iv-dd-cLT" secondAttribute="topMargin" id="E3v-hu-1DC"/>
+                                        <constraint firstItem="BtS-6x-Gbc" firstAttribute="leading" secondItem="Ts6-4h-8aP" secondAttribute="trailing" constant="260" id="EkA-B0-bBg"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BtS-6x-Gbc" secondAttribute="trailing" id="Fmb-bw-hPE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BtS-6x-Gbc" secondAttribute="bottom" id="fg2-WI-sFI"/>
+                                        <constraint firstItem="Ts6-4h-8aP" firstAttribute="leading" secondItem="5Iv-dd-cLT" secondAttribute="leadingMargin" id="hz7-Qt-k4O"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="H7m-g1-xYe" secondAttribute="bottom" id="ngc-9H-ufW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -41,7 +74,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIs-3t-Hbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883" y="108"/>
+            <point key="canvasLocation" x="882.60869565217399" y="107.8125"/>
         </scene>
         <!--Blog App-->
         <scene sceneID="fFx-Gy-1a1">
@@ -123,6 +156,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
