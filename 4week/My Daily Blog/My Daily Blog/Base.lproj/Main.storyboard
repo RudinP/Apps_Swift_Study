@@ -56,6 +56,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="zqN-36-rGR"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="onDateChanged:" destination="aJZ-J8-Oo5" eventType="valueChanged" id="6YU-rQ-BGB"/>
+                                </connections>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="857-2v-gUv">
                                 <rect key="frame" x="25" y="213" width="364" height="624"/>
