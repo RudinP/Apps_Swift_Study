@@ -90,6 +90,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blogEntryTextView" destination="857-2v-gUv" id="ui7-Ea-pQo"/>
+                        <outlet property="botConstraint" destination="oZu-vM-YRn" id="dHV-EM-hV0"/>
                         <outlet property="datePicker" destination="k6k-yH-iup" id="Yw9-He-0Ak"/>
                     </connections>
                 </viewController>
