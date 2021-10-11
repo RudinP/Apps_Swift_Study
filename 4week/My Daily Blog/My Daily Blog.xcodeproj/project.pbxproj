@@ -19,6 +19,7 @@
 		4B206D282706F38100E677D2 /* BlogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D272706F38100E677D2 /* BlogEntryViewController.swift */; };
 		4B206D5027084E9100E677D2 /* BlogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D4E27084E9100E677D2 /* BlogEntry+CoreDataClass.swift */; };
 		4B206D5127084E9100E677D2 /* BlogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B206D4F27084E9100E677D2 /* BlogEntry+CoreDataProperties.swift */; };
+		4BE135982713F5F500C5D6BC /* BlogEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE135972713F5F500C5D6BC /* BlogEntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4B206D272706F38100E677D2 /* BlogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryViewController.swift; sourceTree = "<group>"; };
 		4B206D4E27084E9100E677D2 /* BlogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4B206D4F27084E9100E677D2 /* BlogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BE135972713F5F500C5D6BC /* BlogEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				4B206CE62706EDA100E677D2 /* SceneDelegate.swift */,
 				4B206CEA2706EDA100E677D2 /* Main.storyboard */,
 				4B206D222706F34100E677D2 /* BlogEntriesTableViewController.swift */,
+				4BE135972713F5F500C5D6BC /* BlogEntryTableViewCell.swift */,
 				4B206D272706F38100E677D2 /* BlogEntryViewController.swift */,
 				4B206CF02706EDA200E677D2 /* Assets.xcassets */,
 				4B206CF22706EDA200E677D2 /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE135982713F5F500C5D6BC /* BlogEntryTableViewCell.swift in Sources */,
 				4B206D5027084E9100E677D2 /* BlogEntry+CoreDataClass.swift in Sources */,
 				4B206CEF2706EDA100E677D2 /* My_Daily_Blog.xcdatamodeld in Sources */,
 				4B206D5127084E9100E677D2 /* BlogEntry+CoreDataProperties.swift in Sources */,

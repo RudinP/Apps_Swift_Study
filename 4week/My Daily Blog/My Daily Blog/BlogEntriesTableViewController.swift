@@ -5,7 +5,7 @@
 
 
 import UIKit
-
+import CoreData
 class BlogEntriesTableViewController: UITableViewController {
 
     var blogEntries: [BlogEntry] = []
@@ -17,7 +17,9 @@ class BlogEntriesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             
-            if let dataFromCoreData = try? context.fetch(BlogEntry.fetchRequest()) as? [BlogEntry]{
+            let request: NSFetchRequest<BlogEntry> = BlogEntry.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+            if let dataFromCoreData = try? context.fetch(request) as? [BlogEntry]{
                 
                 blogEntries = dataFromCoreData;
                 tableView.reloadData()
@@ -33,10 +35,11 @@ class BlogEntriesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let row = tableView.dequeueReusableCell(withIdentifier: "entryRow"){
+        if let row = tableView.dequeueReusableCell(withIdentifier: "entryRow") as? BlogEntryTableViewCell{
             let blogEntry = blogEntries[indexPath.row]
-            
-            row.textLabel?.text = blogEntry.content //강의에서는 이 부분을 지우고 해결했으나, 동일한 코드임에도 내 시뮬에서는 이 부분을 주석처리하면 text처리가 안되므로 그냥 둠
+            row.entryContentLabel.text = blogEntry.content;
+            row.monthTag.text = blogEntry.setMonth()
+            row.dayTag.text = blogEntry.setDay()
 
             return row
         }else{

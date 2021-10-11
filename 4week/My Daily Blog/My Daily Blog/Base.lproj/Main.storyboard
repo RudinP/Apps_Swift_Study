@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryRow" rowHeight="91" id="KwA-YE-1z2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryRow" rowHeight="91" id="KwA-YE-1z2" customClass="BlogEntryTableViewCell" customModule="My_Daily_Blog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwA-YE-1z2" id="5Iv-dd-cLT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts6-4h-8aP">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts6-4h-8aP">
                                             <rect key="frame" x="20" y="11" width="72" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="7rX-0X-how"/>
@@ -33,14 +33,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-g1-xYe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-g1-xYe">
                                             <rect key="frame" x="38" y="39" width="36" height="41"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                             <color key="textColor" systemColor="systemBlueColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtS-6x-Gbc">
-                                            <rect key="frame" x="352" y="11" width="41.5" height="69"/>
+                                            <rect key="frame" x="118" y="11" width="41.5" height="69"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -50,13 +50,18 @@
                                         <constraint firstItem="Ts6-4h-8aP" firstAttribute="top" secondItem="5Iv-dd-cLT" secondAttribute="topMargin" id="5fq-rL-pbF"/>
                                         <constraint firstItem="H7m-g1-xYe" firstAttribute="centerX" secondItem="Ts6-4h-8aP" secondAttribute="centerX" id="CjQ-NS-FFX"/>
                                         <constraint firstItem="BtS-6x-Gbc" firstAttribute="top" secondItem="5Iv-dd-cLT" secondAttribute="topMargin" id="E3v-hu-1DC"/>
-                                        <constraint firstItem="BtS-6x-Gbc" firstAttribute="leading" secondItem="Ts6-4h-8aP" secondAttribute="trailing" constant="260" id="EkA-B0-bBg"/>
+                                        <constraint firstItem="BtS-6x-Gbc" firstAttribute="leading" secondItem="Ts6-4h-8aP" secondAttribute="trailing" constant="26" id="EkA-B0-bBg"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BtS-6x-Gbc" secondAttribute="trailing" id="Fmb-bw-hPE"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="BtS-6x-Gbc" secondAttribute="bottom" id="fg2-WI-sFI"/>
                                         <constraint firstItem="Ts6-4h-8aP" firstAttribute="leading" secondItem="5Iv-dd-cLT" secondAttribute="leadingMargin" id="hz7-Qt-k4O"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="H7m-g1-xYe" secondAttribute="bottom" id="ngc-9H-ufW"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayTag" destination="H7m-g1-xYe" id="grN-Tj-GZq"/>
+                                    <outlet property="entryContentLabel" destination="BtS-6x-Gbc" id="Bsq-ZP-hzv"/>
+                                    <outlet property="monthTag" destination="Ts6-4h-8aP" id="MEr-in-CGw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
