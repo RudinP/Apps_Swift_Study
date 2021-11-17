@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Kb-t8z">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="185" y="433" width="44" height="30"/>
+                                <state key="normal" title="Check"/>
                                 <connections>
                                     <action selector="AnswerChecker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9q-dy-naU"/>
                                 </connections>
@@ -29,23 +29,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="au3-Ci-oYl">
+                                <rect key="frame" x="159" y="322" width="95" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-cu-9La">
+                                <rect key="frame" x="186" y="491" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ibp-Kb-t8z" firstAttribute="top" secondItem="TSp-9j-L4O" secondAttribute="bottom" constant="182" id="786-S1-SNF"/>
+                            <constraint firstItem="ewO-cu-9La" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Pq-m3-pHi"/>
+                            <constraint firstItem="ewO-cu-9La" firstAttribute="top" secondItem="ibp-Kb-t8z" secondAttribute="bottom" constant="28" id="9fz-oU-p8X"/>
+                            <constraint firstItem="ibp-Kb-t8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N47-YH-zwE"/>
                             <constraint firstItem="ibp-Kb-t8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VSJ-KR-qdF"/>
+                            <constraint firstItem="au3-Ci-oYl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="btZ-3X-8vx"/>
                             <constraint firstItem="TSp-9j-L4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnp-Uc-nLE"/>
                             <constraint firstItem="ibp-Kb-t8z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="odg-Gg-7kR"/>
+                            <constraint firstItem="au3-Ci-oYl" firstAttribute="top" secondItem="TSp-9j-L4O" secondAttribute="bottom" constant="71" id="tgn-yG-GCB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answer" destination="TSp-9j-L4O" id="V90-xu-eUo"/>
+                        <outlet property="answerWord" destination="au3-Ci-oYl" id="LNA-eE-adw"/>
+                        <outlet property="bullCow" destination="ewO-cu-9La" id="IoN-fE-PKd"/>
+                        <outlet property="button" destination="ibp-Kb-t8z" id="4Be-bL-cYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="78"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
