@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B721F70274D1238009FEC2C /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B721F6D274D1238009FEC2C /* cow.png */; };
+		4B721F71274D1238009FEC2C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B721F6E274D1238009FEC2C /* background.png */; };
+		4B721F72274D1238009FEC2C /* bull.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B721F6F274D1238009FEC2C /* bull.png */; };
 		4BC14F702737B65800FC0153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC14F6F2737B65800FC0153 /* AppDelegate.swift */; };
 		4BC14F722737B65800FC0153 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC14F712737B65800FC0153 /* SceneDelegate.swift */; };
 		4BC14F742737B65800FC0153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC14F732737B65800FC0153 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B721F6D274D1238009FEC2C /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cow.png; sourceTree = "<group>"; };
+		4B721F6E274D1238009FEC2C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		4B721F6F274D1238009FEC2C /* bull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bull.png; sourceTree = "<group>"; };
 		4BC14F6C2737B65800FC0153 /* BullsAndCows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsAndCows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC14F6F2737B65800FC0153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC14F712737B65800FC0153 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 		4BC14F6E2737B65800FC0153 /* BullsAndCows */ = {
 			isa = PBXGroup;
 			children = (
+				4B721F6E274D1238009FEC2C /* background.png */,
+				4B721F6F274D1238009FEC2C /* bull.png */,
+				4B721F6D274D1238009FEC2C /* cow.png */,
 				4BC14F6F2737B65800FC0153 /* AppDelegate.swift */,
 				4BC14F712737B65800FC0153 /* SceneDelegate.swift */,
 				4BC14F732737B65800FC0153 /* ViewController.swift */,
@@ -134,8 +143,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BC14F7F2737B65900FC0153 /* LaunchScreen.storyboard in Resources */,
+				4B721F71274D1238009FEC2C /* background.png in Resources */,
+				4B721F72274D1238009FEC2C /* bull.png in Resources */,
 				4BC14F7C2737B65900FC0153 /* Assets.xcassets in Resources */,
 				4BC14F772737B65800FC0153 /* Main.storyboard in Resources */,
+				4B721F70274D1238009FEC2C /* cow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
